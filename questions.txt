@@ -1,0 +1,12 @@
+1.stdint.h is a header file that defines exact width integer types.
+2.Here we use intend to use the data in a specific way. uint8_t is an integer that is 8 bits wide.
+3.BYTE is 1 byte, DWORD is 4 bytes, LONG is 4 bytes and WORD is 2 bytes.
+4.The first two bytes of a BMP is a WORD and denote bfType which specifies the file type. It must be set to the signature word BM (0x4D42) to indicate bitmap.
+5.bfSize specifies the size in bytes,of the bitmap file and biSize specifies the size of the structure in bytes.
+6.If biHeight is negative, the bitmap is a top-down DIB (device-independent bitmap)and its origin is the upper left corner.
+7.The biBitCount member of the BITMAPINFOHEADER structure determines the number of bits that define each pixel and the maximum number of colors in the bitmap.
+8.fopen will return NULL if it cannot create the outfile to write to.
+9.It is because the program is reading in 1 RGB at a time.
+10.biWidth is the width of the bitmap in pixels. If the width is 3, padding is necessary since the scanline must be a multiple of 4. 3 pixels * 3 bytes per pixel = 9 bytes. Therefore 3 bytes should be added to bring the scanline to 12 bytes.
+11.It skips over any padding and looks for the next pixel (RGB triple)
+12.It is an integer constant which when used as the whence argument to the fseek or fseeko function. It specifies that the offset provided is relative to the current file position.

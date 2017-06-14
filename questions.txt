@@ -1,0 +1,13 @@
+0.  This word is used here as a reference to the bigegst word. Pneumonoultramicroscopicsilicovolcanoconiosis is a pneumoconiosis caused by inhalation of very fine silicate or quartz dust.
+
+1.  getrusage - gets the resource usage.
+
+2.  16 members are available.
+
+3.  We pass before and after by reference to the function "calculate" because passing large structs by value is slow and takes up a lot of memory. If you're passing or returning structs by value, copies of those structs will get placed on the stack, potentially causing stack overflow.
+
+4.  If the character is an alphabetical character or an apostrophe that is not at index 0 of the word, the character is appended to the word array or else if the character is numerical, the word is ignored or else if we hit a space or  punctuation, we must have found a whole word so we terminate by adding \0 to the word array.
+
+5.  If we use fscanf, then we wont be able to keep track of the digits or special characters entered. It may also cause segmentaton faults in reading a longer string.
+
+6.  It is because LENGTH and Dictionary are also constants.
